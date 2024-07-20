@@ -22,7 +22,7 @@ body {
 a {
   text-decoration: none;
   color: var(--primary-text);
-  font-size: 1.5rem;
+
   transition: color 0.2s ease;
 }
 a:hover {
@@ -31,13 +31,18 @@ a:hover {
 
 p {
   width: 65ch;
-  font-size: 1.5rem;
   line-height: 1.5;
   text-align: center;
+  margin-top: 0.75rem;
+}
+
+a,
+p {
+  font-size: 1.5rem;
 }
 
 section {
-  height: 35dvh;
+  height: 45dvh;
   padding-bottom: 40rem;
   display: flex;
   flex-direction: column;
@@ -104,6 +109,14 @@ h2 {
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+}
+
+.contact {
+  padding-bottom: 20rem;
+}
+
+#email {
+  font-style: italic;
 }
 
 footer {
