@@ -39,6 +39,10 @@ p {
 section {
   height: 35dvh;
   padding-bottom: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h2 {
@@ -100,14 +104,6 @@ h2 {
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-}
-
-/* About Section */
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Animations */
