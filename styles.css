@@ -1,3 +1,4 @@
+/* General */
 :root {
   --bg-color: #22223b;
   --surface: #4a4e69;
@@ -17,14 +18,7 @@ body {
   background-color: var(--bg-color);
 }
 
-.nav-items {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  gap: 1rem;
-  padding-right: 2rem;
-}
-
+/* Elements */
 a {
   text-decoration: none;
   color: var(--primary-text);
@@ -33,6 +27,31 @@ a {
 }
 a:hover {
   color: var(--secondary-text);
+}
+
+p {
+  width: 80ch;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+section {
+  height: 35dvh;
+  padding-bottom: 40rem;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+/* Header */
+.nav-items {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 1rem;
+  padding-right: 2rem;
 }
 
 #header {
@@ -44,6 +63,7 @@ a:hover {
   top: 0;
   left: 0;
   right: 0;
+  height: 10dvh;
 }
 
 #theme-switch-icon {
@@ -54,4 +74,62 @@ a:hover {
 
 #theme-switch-icon:hover {
   transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10dvh;
+}
+.hero h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-style: italic;
+  text-align: center;
+  animation-name: focus-in-contract;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+}
+.hero p {
+  visibility: hidden;
+  animation-delay: 1.5s;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animations */
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    letter-spacing: 0;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
